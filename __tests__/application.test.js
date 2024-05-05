@@ -179,4 +179,3 @@ test('modal', async ({ page }) => {
   await expect(modalBody).not.toBeVisible();
   await expect(postTitle).not.toHaveClass('fw-bold');
 });
-

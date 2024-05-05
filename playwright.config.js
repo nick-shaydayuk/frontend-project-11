@@ -3,7 +3,7 @@
 
 /** @type {import('@playwright/test').PlaywrightTestConfig} */
 const config = {
-  //testIgnore: '**/**\.test\.js',
+  // testIgnore: '**/**\.test\.js',
   workers: 1,
   maxFailures: 1,
   testDir: './__tests__',

@@ -40,12 +40,12 @@ const fetchNewPosts = (watchedState) => {
           channelId: feed.id,
         }));
         const oldPosts = watchedState.posts.filter(
-          (post) => post.channelId === feed.id
+          (post) => post.channelId === feed.id,
         );
         const posts = differenceWith(
           newPosts,
           oldPosts,
-          (p1, p2) => p1.title === p2.title
+          (p1, p2) => p1.title === p2.title,
         ).map((post) => ({ ...post, id: uniqueId() }));
         watchedState.posts.unshift(...posts);
       })
@@ -93,7 +93,6 @@ const loadRss = (watchedState, url) => {
       watchedState.loadingProcess.status = 'failed';
     });
 };
-
 
 export default () => {
   const elements = {
